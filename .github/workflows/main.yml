@@ -38,4 +38,4 @@ jobs:
 
       # Step 6: Run patcher
       - name: Run patcher
-        run: ./main ./com.hammerandchisel.discord_247.0_und3fined.ipa
+        run: ./main 
