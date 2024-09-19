@@ -13,24 +13,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.20'
-
-    - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
+    steps:
       # Step 1: Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 3: Install dependencies
+      # Step 2: Set up Go
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'
+
+      # Step 3: Build
+      - name: Build
+        run: go build -v ./...
+
+      # Step 4: Test
+      - name: Test
+        run: go test -v ./...
+
+      # Step 5: Download discord ipa (Ensure you have access and the link is correct)
       - name: Download discord ipa
         run: wget https://und3fy-my.sharepoint.com/personal/greenglasst_und3fy_dev/_layouts/15/download.aspx?share=ETxaw2pF-hpDgsmKwQAiBpsBcoHujvHk0QYLvXOHjEcLyw
 
-      # Step 4: Run tests
+      # Step 6: Run patcher
       - name: Run patcher
         run: ./main ./com.hammerandchisel.discord_247.0_und3fined.ipa
