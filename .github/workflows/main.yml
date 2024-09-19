@@ -34,8 +34,8 @@ jobs:
 
       # Step 5: Download discord ipa (Ensure you have access and the link is correct)
       - name: Download discord ipa
-        run: wget https://und3fy-my.sharepoint.com/personal/greenglasst_und3fy_dev/_layouts/15/download.aspx?share=ETxaw2pF-hpDgsmKwQAiBpsBcoHujvHk0QYLvXOHjEcLyw
+        run: wget -O discord.ipa https://und3fy-my.sharepoint.com/personal/greenglasst_und3fy_dev/_layouts/15/download.aspx?share=ETxaw2pF-hpDgsmKwQAiBpsBcoHujvHk0QYLvXOHjEcLyw
 
       # Step 6: Run patcher
       - name: Run patcher
-        run: ls
+        run: chmod +x ./patcher-ios && ./patcher-ios discord.ipa
