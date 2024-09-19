@@ -1,0 +1,27 @@
+name: CI Workflow
+
+# Trigger the workflow on push or pull request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 3: Install dependencies
+      - name: Download discord ipa
+        run: wget https://und3fy-my.sharepoint.com/personal/greenglasst_und3fy_dev/_layouts/15/download.aspx?share=ETxaw2pF-hpDgsmKwQAiBpsBcoHujvHk0QYLvXOHjEcLyw
+
+      # Step 4: Run tests
+      - name: Run patcher
+        run: ./main
