@@ -43,6 +43,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-         name: unbound.ipa
-         path: ${{ github.workspace }}
+         name: Unbound.ipa
+         path: ${{ github.workspace }}/Unbound.ipa
          if-no-files-found: error
