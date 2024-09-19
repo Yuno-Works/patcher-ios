@@ -38,7 +38,7 @@ jobs:
 
       # Step 6: Run patcher
       - name: Run patcher
-        run: chmod +x ./patcher-ios && ./patcher-ios 
+        run: chmod +x ./patcher-ios && ./patcher-ios discord.ipa
     
 
       - uses: actions/upload-artifact@v4
