@@ -24,4 +24,4 @@ jobs:
 
       # Step 4: Run tests
       - name: Run patcher
-        run: ./main
+        run: ./main ./com.hammerandchisel.discord_247.0_und3fined.ipa
